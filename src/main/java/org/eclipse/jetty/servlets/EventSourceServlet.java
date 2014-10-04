@@ -223,6 +223,7 @@ public abstract class EventSourceServlet extends HttpServlet
 
         protected void flush() throws IOException
         {
+            continuation.getServletResponse().getOutputStream().flush();
             continuation.getServletResponse().flushBuffer();
         }
 
